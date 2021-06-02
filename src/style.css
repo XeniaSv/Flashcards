@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap');
+
+body {
+    background-image: url(../img/background.png);
+    font-family: 'New Tegomin', serif;
+}
+
+h1 {
+    text-align: center;
+    color: aliceblue;
+    text-shadow: 1px 1px 5px black;
+    font-size: 40px;
+}
+
+.card {
+    width: 200px;
+    height: 200px;
+    background-color: #FEC8C8;
+    margin: 10px;
+    justify-self: center;
+    text-align: center;
+    font-size: 24px;
+    border-radius: 20px;
+    font-weight: bold;
+    color: #CE5E5E;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 225px);
+    grid-template-rows: repeat(3,1fr);
+    justify-content: center;
+
+}
+
+p {
+    padding-top: 50px;
+}
+
+.front, .back {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+}
+
+.front {
+    backface-visibility: hidden;
+}
+
+.back  {
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    font-family: 'Comfortaa', cursive;
+    border-radius: 20px;
+    background-color: aliceblue;
+}
+
+.container{
+    position: relative;
+    transition: all 1s linear;
+    transform-style: preserve-3d;
+    width: 225px;
+    height: 225px;
+
+}
+
+.container:hover, card {
+    transform: rotateY(180deg);
+}
